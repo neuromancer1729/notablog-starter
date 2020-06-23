@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:title" content="Hacking productivity with cron jobs">
+    <meta property="og:type" content="blog">
+  <title>Hacking productivity with cron jobs</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+  <link rel="stylesheet" type="text/css" href="css/notablog.css">
+  <link rel="stylesheet" type="text/css" href="css/theme.css">
+  <style>
+    :root {
+      font-size: 18px;
+    }
+
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+    <a href="index.html">
+      <div class="Navbar__Btn"> <span>Home</span></div>
+    </a>
+                                                                                            <span class="Navbar__Delim">&centerdot;</span>
+    <a href="about.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2f1701ce-d152-42f8-9a0b-71f01699a103%2Favatar.jpg"></span> <span>About</span></div>
+    </a>
+                        <span class="Navbar__Delim">&centerdot;</span>
+    <a href="projects.html">
+      <div class="Navbar__Btn"><span>⚙️</span> <span>Projects</span></div>
+    </a>
+                                                                  </nav>
+  <header class="Header">
+          <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+        <h1 class="Header__Title">Hacking productivity with cron jobs</h1>
+            <div class="DateTagBar">
+                <span class="DateTagBar__Item DateTagBar__Date">Posted on Fri, Apr 25, 2014</span>
+                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--green">
+            <a href="tag/hack.html">hack</a>
+          </span>
+                  </div>
+          </header>
+      <article id="https://www.notion.so/137586e1d87f4af089bedb265584d41f" class="PageRoot"><div id="https://www.notion.so/b10e793253364862a507c152fe388ae3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/cb8e85a63fc24e73af225a568effb811" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">When I first learned about the idea of adding sites to be blocked in /etc/hosts, I was delighted, mainly because I like such ideas which tend to enhance productivity. I began using it exhaustively, but soon enough I realised that even though it provided a decent way to get away from nagging sites like facebook and twitter, this method wasn&#x27;t very successfull in time management, I habituated myself to edit /etc/hosts file with ease and hence lowering the barrier to attend to the itch.</span></span></p></div><div id="https://www.notion.so/2834ce37e4074ac2b857ce465d7bc690" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">The success of any good productivity hack is directly propotional to the barrier it provides to motivate you to not to attend to the itch, in this case the barrier was as low as editing a file in vim.</span></span></p></div><div id="https://www.notion.so/c6aeba07b67e4869939c48cc3644145f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Not anymore, I have written a </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://web.archive.org/web/20160123130711/https://github.com/sauravtom/productivity">tiny python script</a></span><span class="SemanticString"> with changes my /etc/hosts file every 1 minutes or so, with a previously specified template, thanks to cronjobs in linux.</span></span></p></div><div id="https://www.notion.so/3a390a1c8d85442bac5d0cf2423e6c9f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">So whenever I feel like checking my facebook or twitter, I still edit my /etc/hosts file, but I only get a 1 minute window to do all that I can before it gets restored again to pre-specified template. After that facebook.com gets re-added to my bloked sites list and I will again have to edit /etc/hosts to continue browsing facebook, which I seldom do. See, in this case the barrier is not only to edit the /etc/hosts file but also to do it repeatedly after every minute, which in my opinion is huge.</span></span></p></div><div id="https://www.notion.so/ea5126c64439468eb2c522284c003d0d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">It has been very effective for me ever since I started using it, I have begun to use facebook exclusively as a messenger (which I use from my mobile) to connect with college friends, and check college groups feed (for bunks and notices) every once in a while on desktop. Needless to say a lot of time is saved, I no longer pursue meaningless pursuits like checking out profiles of my highschool friends and drooling in nostalgia on a boring saturday noon.</span></span></p></div><div id="https://www.notion.so/62d34d839d9f4b83bf447104dd30e608" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Same is with twitter.</span></span></p></div><div id="https://www.notion.so/cb9fa4106d3b43a389039265e82efb4d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">You can find the aforementioned script on my github </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://web.archive.org/web/20160123130711/https://github.com/sauravtom/productivity">https://github.com/sauravtom/productivity</a></span></span></p></div><div id="https://www.notion.so/0468107db3624161b16f0a9da8168d2f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">P.S It uses cronjobs so it only supports linux as of now, but support for more OSes can be added in the future. Pull requests are welcome.</span></span></p></div></article>  <footer class="Footer">
+        <div>&copy; Saurav's Blog 2020</div>
+        
+    </footer>
+</body>
+
+</html>
