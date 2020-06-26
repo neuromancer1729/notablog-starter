@@ -31,6 +31,7 @@
       margin-top: 1.0rem;
     }
   </style>
+  
 </head>
 
 <body>
@@ -75,7 +76,19 @@
       {{post.contentHTML}}
   <footer class="Footer">
         <!-- <div>&copy; {{siteMeta.title}} 2020</div> -->
+        <div class="commentbox"></div>
     </footer>
 </body>
+
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+
+<script>
+  import commentBox from 'commentbox.io';
+// or
+const commentBox = require('commentbox.io');
+// or if using the CDN, it will be available as a global "commentBox" variable.
+
+commentBox('5679136320258048-proj');
+</script>
 
 </html>
