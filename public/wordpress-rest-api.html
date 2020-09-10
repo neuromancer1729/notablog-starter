@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:title" content="Wordpress rest API tutorial">
+    <meta property="og:type" content="blog">
+  <title>Wordpress rest API tutorial</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+  <link rel="stylesheet" type="text/css" href="css/notablog.css">
+  <link rel="stylesheet" type="text/css" href="css/theme.css">
+  <style>
+    :root {
+      font-size: 18px;
+    }
+
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <nav class="Navbar">
+    <a href="index.html">
+      <div class="Navbar__Btn"> <span>Home</span></div>
+    </a>
+                                                                                                            <span class="Navbar__Delim">&centerdot;</span>
+    <a href="about.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7876a2b8-baaf-4d72-8110-d0cbf017b4ca%2Favatar_small.jpg"></span> <span>About</span></div>
+    </a>
+                <span class="Navbar__Delim">&centerdot;</span>
+    <a href="bookmarks.html">
+      <div class="Navbar__Btn"><span>🖇️</span> <span>Links & Bookmarks</span></div>
+    </a>
+                                                                                                                                                                                                                                          </nav>
+  <header class="Header">
+          <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+        <h1 class="Header__Title">Wordpress rest API tutorial</h1>
+            <div class="DateTagBar">
+                          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--blue">
+            <a href="tag/tutorial.html">tutorial</a>
+          </span>
+                  </div>
+          </header>
+      <article id="https://www.notion.so/6a3a2da490004d6987061a78a996edf7" class="PageRoot"><div id="https://www.notion.so/95d840db517047418c524d84d4a38e62" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/53fcdfb8f25f4b48b3afe45b03d8dc20" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">When you do a fresh install of wordpress it doesn&#x27;t contain the .htaccess file. You can create it by editing the permalink structure from settings. </span></span></p></div><div id="https://www.notion.so/f780d888c2a746b2b37fe83da1bfce27" class="Image Image--PageWidth"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc6c3f53e-c326-40b7-8162-985143928b5a%2FScreen_Shot_2020-09-03_at_5.48.06_PM.png?width=1398"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc6c3f53e-c326-40b7-8162-985143928b5a%2FScreen_Shot_2020-09-03_at_5.48.06_PM.png?width=1398" style="width:100%"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/18e7a4a7bb884b84aa0c5cb2c33407b5" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/926574b9768b4af1b04cf37521e77fe2" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Now if you try to call the rest API you may get an error saying</span></span></p></div><pre id="https://www.notion.so/e9d178bc3811453d8f4d8752bb861d8b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token constant">ERROR</span><span class="token operator">:</span> Wordpress Error<span class="token operator">:</span> Sorry<span class="token punctuation">,</span> you are not allowed to create posts <span class="token keyword">as</span> <span class="token keyword">this</span> user<span class="token punctuation">.</span>
+Error<span class="token operator">:</span> Wordpress Error<span class="token operator">:</span> Sorry<span class="token punctuation">,</span> you are not allowed to create posts <span class="token keyword">as</span> <span class="token keyword">this</span> user<span class="token punctuation">.</span>
+    at Object<span class="token punctuation">.</span><span class="token function">wordpressApiRequest</span> <span class="token punctuation">(</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>lib<span class="token operator">/</span>node_modules<span class="token operator">/</span>n8n<span class="token operator">/</span>node_modules<span class="token operator">/</span>n8n<span class="token operator">-</span>nodes<span class="token operator">-</span>base<span class="token operator">/</span>dist<span class="token operator">/</span>nodes<span class="token operator">/</span>Wordpress<span class="token operator">/</span>GenericFunctions<span class="token punctuation">.</span>js<span class="token operator">:</span><span class="token number">35</span><span class="token operator">:</span><span class="token number">15</span><span class="token punctuation">)</span>
+    at <span class="token function">processTicksAndRejections</span> <span class="token punctuation">(</span>internal<span class="token operator">/</span>process<span class="token operator">/</span>task_queues<span class="token punctuation">.</span>js<span class="token operator">:</span><span class="token number">97</span><span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">)</span></span></span></span></code></pre><div id="https://www.notion.so/914ce498266d46e7bfe00f1cc8389381" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/5efb4cce6b754f3e89ffaf9e4b1ec18e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">This is because by default only cookie based authentication is enabled in wordpress, hence a plugin is needed to enable username password based auth.</span></span></p></div><div id="https://www.notion.so/0894c729063c4982951fdb752bd3b661" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/65dc6be792d54f9ca59dce2b0195439d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">To solve this you need add this plugin </span></span></p></div><div id="https://www.notion.so/cf1200194d394d30a9c1d8a3ac7df994" class="Bookmark"><a href="https://github.com/WP-API/Basic-Auth"><h5 class="Bookmark__Title">WP-API/Basic-Auth</h5><p class="Bookmark__Desc">This plugin adds Basic Authentication to a WordPress site. Note that this plugin requires sending your username and password with every request, and should only be used over SSL-secured connections or for local development and testing. Without SSL we strongly recommend using the OAuth 1.0a authentication handler in production environments.</p><p class="Bookmark__Link">https://github.com/WP-API/Basic-Auth</p></a></div><div id="https://www.notion.so/856d53d7c6324fcb9096ca8dcbd67075" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/b74702eb2af441838dd44b1f69d6a812" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Download the entire repo as a zip file and upload it to your plugin directory</span></span></p></div><div id="https://www.notion.so/3045a68a4dc04531a31feee44549d511" class="Image Image--PageWidth"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4a8f48ea-e12e-4173-a4af-d7abfdf01fcd%2FScreen_Shot_2020-09-03_at_5.54.16_PM.png?width=3186"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4a8f48ea-e12e-4173-a4af-d7abfdf01fcd%2FScreen_Shot_2020-09-03_at_5.54.16_PM.png?width=3186" style="width:100%"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/53ea83d5b7fc402d9e4c1178bb58d4a0" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/26d8ad02bb944d0c92dcdbe1afb7b523" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Activate the plugin and you&#x27;re good to go!</span></span></p></div><div id="https://www.notion.so/f369e869f2c945179d632595bb9a3ade" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/1c3c5ba05620438184b5967e40ebab4a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Now you can proceed to interact with your wordpress instance via API</span></span></p></div><div id="https://www.notion.so/2632e1cb1a214cbf83fc2c3fcb6a23a5" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><pre id="https://www.notion.so/99a5a7114ec246a38318118b513eea1b" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token keyword">const</span> <span class="token constant">WPAPI</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">'wpapi/superagent'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// fetching posts</span>
+<span class="token keyword">var</span> wp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WPAPI</span><span class="token punctuation">(</span><span class="token punctuation">{</span> endpoint<span class="token operator">:</span> <span class="token string">'http://src.wordpress-develop.dev/wp-json'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+wp<span class="token punctuation">.</span><span class="token function">posts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">data</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// do something with the returned posts</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">err</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// handle error</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//creating posts</span>
+
+<span class="token comment">// You must authenticate to be able to POST (create) a post</span>
+<span class="token keyword">var</span> wp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WPAPI</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    endpoint<span class="token operator">:</span> <span class="token string">'http://your-site.com/wp-json'</span><span class="token punctuation">,</span>
+    <span class="token comment">// This assumes you are using basic auth, as described further below</span>
+    username<span class="token operator">:</span> <span class="token string">'someusername'</span><span class="token punctuation">,</span>
+    password<span class="token operator">:</span> <span class="token string">'password'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+wp<span class="token punctuation">.</span><span class="token function">posts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// "title" and "content" are the only required properties</span>
+    title<span class="token operator">:</span> <span class="token string">'Your Post Title'</span><span class="token punctuation">,</span>
+    content<span class="token operator">:</span> <span class="token string">'Your post content'</span><span class="token punctuation">,</span>
+    <span class="token comment">// Post will be created as a draft by default if a specific "status"</span>
+    <span class="token comment">// is not specified</span>
+    status<span class="token operator">:</span> <span class="token string">'publish'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span> <span class="token parameter">response</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// "response" will hold all properties of your newly-created post,</span>
+    <span class="token comment">// including the unique `id` the post was assigned on creation</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> response<span class="token punctuation">.</span>id <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></span></span></span></code></pre><div id="https://www.notion.so/cf2a85e8f3a445bfb7f4058ed5976d94" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/268dfd8cfee344bb9e799645f468959f" class="Bookmark"><a href="https://github.com/WP-API/node-wpapi"><h5 class="Bookmark__Title">WP-API/node-wpapi</h5><p class="Bookmark__Desc">An isomorphic JavaScript client for the WordPress REST API - WP-API/node-wpapi</p><p class="Bookmark__Link">https://github.com/WP-API/node-wpapi</p></a></div></article>
+  <footer class="Footer">
+        <!-- <div>&copy; Saurav's blog 2020</div> -->
+        <div id="graphcomment"></div>
+    </footer>
+</body>
+
+<!-- GRAPH COMMENTS WIDGET -->
+<script type="text/javascript">
+
+  /* - - - CONFIGURATION VARIABLES - - - */
+
+  // make sure the id is yours
+  window.gc_params = {
+    graphcomment_id: 'Personal-Blog',
+
+    // if your website has a fixed header, indicate it's height in pixels
+    fixed_header_height: 0,
+  };
+
+  /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+  
+  (function() {
+    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+    gc.src = 'https://graphcomment.com/js/integration.js?' + Math.round(Math.random() * 1e8);
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+  })();
+
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics-sauraavxyz.caprover.sauraav.xyz/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+<!--GOAT COUNTER WIDGET-->
+<script data-goatcounter="https://tom1729.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170884966-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170884966-1');
+</script>
+
+
+</html>
